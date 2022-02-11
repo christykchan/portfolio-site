@@ -37,10 +37,13 @@
     <h1>Hello again!</h1>
     <div>
       <picture>
-        <source srcset="img/aboutme/christy.png" media="(max-width:767px)">
-        <img src="img/aboutme/christy2x.png" alt="Profile Picture">
+        <div class="mypicture__wrap">
+          <source class="mypicture" srcset="img/aboutme/christy.png" media="(max-width:767px)">
+          <img class="mypicture" src="img/aboutme/christy2x.png" alt="Profile Picture">
+          <h2 class="img__description">Nice to meet you!</h2>
       </picture>
     </div>
+
     <h2>Who am I?</h2>
     <h3> I'm a UI/UX designer who is enthusiastic about creating user-centric design solutions and transforming ideas into appealing designs that are simple, enjoyable, and harmonious.</h3>
 
@@ -140,15 +143,15 @@
         <img src="img/aboutme/sora2x.png" alt="Profile Picture">
       </picture>
     </div>
-
-    <h3><a href="files/chan-hoiman-resume.pdf" download>Download My Resume</a></h3>
+    <h3><a href="files/chan-hoiman-resume.pdf" class="button">Download My Resume</a></h3>
   </main>
   <!-- For the footer  -->
   <footer id="contact">
     <h2>Get in Touch</h2>
-    <p>I'm always looking for ways to exchange ideas!</p>
-    <p>Connect with me on <a href="live:christykandy">Skype</a></p>
-    <p>Prefer sending an email? <a href="mailto:christychan04@gmail.com">Say Hello</a></p>
+		<p>
+			I'm always looking for ways to exchange ideas!</p>
+				<p><a href="mailto:christychan04@gmail.com" class="email link text-underlined">Send me an e-mail</a></p>
+		<div>
     <div>
       <!--Social Media Layout and Placeholders-->
       <a href="https://www.linkedin.com/in/christychan0414/" target="_blank">
