@@ -51,7 +51,6 @@ h4 {
 }
 
 
-
 /*hyperlinks*/
 a {
   color: #C48FC9;
@@ -79,7 +78,7 @@ a:focus {
 .button {
   display: inline-block;
   background-color: #C48FC9;
-  color: #261C35;
+  color: #fff;
   font-weight: 700;
   padding: 10px 24px;
   border-radius: 8px;
@@ -180,44 +179,3 @@ a:focus {
 :root {
   --rLinkColor: #FFEF7F;
 }
-
-/*image overlay
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.mypicture__wrap {
-  position: relative;
-  width: 50%;
-}
-
-.mypicture {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-}
-
-.img__description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 239, 127, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .2s, visibility .2s;
-}
-
-.mypicture__wrap:hover .img__description {
-  visibility: visible;
-  opacity: 1;
-}
-*/
