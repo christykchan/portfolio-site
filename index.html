@@ -19,8 +19,8 @@
 	<!-- For the header -->
 	<header>
 		<!-- For the navigation -->
-		<div>
-			<img src="img/aboutme/logo.png" alt="Christy Chan">
+		<div class="container">
+			<a class="logo" href="index.html"><img src="img/aboutme/logo.png" alt="Christy Chan"></a>
 			<nav>
 				<ul>
 					<li><a href="index.html">Work</a></li>
@@ -33,68 +33,54 @@
 
 	<main>
 		<!-- For the hero section -->
-		<div>
-			<h1 class="hero largetitle">Hello! I'm Christy Chan</h1>
-			<h2 class="hero">A UI/UX Designer based in San Francisco.</h2>
-			<h2 class="hero">I design beautiful and thoughtful digital experiences.</h2>
+		<div id="hero">
+			<div class="container">
+				<h1>Hello! I'm Christy Chan</h1>
+				<h2>A UI/UX Designer based in San Francisco. I design beautiful and thoughtful digital experiences.</h2>
+			</div>
 		</div>
 
 		<!-- For your work/projects -->
-		<div>
-			<h2>Work</h2>
+		<div id="work">
+			<div class="container">
+				<div class="row">
+					<h2>Work</h2>
+					<picture>
+						<source srcset="img/localife/localife-cover1x.png" media="(max-width:767px)">
+						<img src="img/localife/localife-cover2x.png" alt="Localife Cover">
+					</picture>
+					<h3>Localife</h3>
+					<p>A local event finder responsive web app</p>
+					<a href="localife.html" class="button">View Project</a>
+				</div>
+			</div>
 		</div>
 
-		<div>
-			<!-- open row that holds (2) columns for project -->
-			<div>
-				<!-- open first column (used for image) -->
-				<picture>
-					<source srcset="img/localife/localife-cover1x.png" media="(max-width:767px)">
-					<img src="img/localife/localife-cover2x.png" alt="Localife Cover">
-				</picture>
-			</div><!-- end first column -->
 
-			<div>
-				<!-- open second column (used for text) -->
-				<h3>Localife</h3><!-- heading for the project -->
-				<p>
-					<!-- open paragraph -->
-					A local event finder responsive web app
-				</p><!-- end paragraph -->
-				<a href="localife.html" class="button">View Project</a><!-- button or link label -->
-			</div><!-- end second column -->
-
-			<div>
-				<!-- open row that holds (2) columns for project -->
-				<div>
-					<!-- open first column (used for image) -->
+		<div id="work">
+			<div class="container">
+				<div class="row">
 					<picture>
 						<source srcset="img/wow/wow-cover1x.jpg" media="(max-width:767px)">
 						<img src="img/wow/wow-cover2x.jpg" alt="WOW Cover">
 					</picture>
-				</div><!-- end first column -->
-
-				<div>
-					<!-- open second column (used for text) -->
-					<h3>World of Warcraft Companion App</h3><!-- heading for the project -->
-					<p>
-						<!-- open paragraph -->
-						A companion app for World of Warcraft Classic
-					</p><!-- end paragraph -->
+					<h3>World of Warcraft Companion App</h3>
+					<p>A companion app for World of Warcraft Classic</p>
 					<a href="wowcompanion.html" class="button">View Project</a><!-- button or link label -->
-				</div><!-- end second column -->
+				</div>
 			</div>
-		</div><!-- end row that holds (2) columns for project -->
-	</main>
-	<!-- For the footer  -->
-	<footer id="contact">
-		<h2>Get in Touch</h2>
-		<p>
-			I'm always looking for ways to exchange ideas!</p>
-		<p><a href="mailto:christychan04@gmail.com" class="email link text-underlined">Send me an e-mail</a></p>
-		<div>
+		</div>
 
-			<!--Social Media Layout and Placeholders-->
+	</main>
+	<footer id="contact">
+		<div class="container">
+			<h2>Get in Touch</h2>
+			<p>
+				I'm always looking for ways to exchange ideas!</p>
+			<p><a href="mailto:christychan04@gmail.com" class="email link text-underlined">Send me an e-mail</a></p>
+
+
+
 			<a href="https://www.linkedin.com/in/christychan0414/" target="_blank">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
@@ -116,7 +102,6 @@
 						fill="#994D71" />
 				</svg>
 			</a>
-
 		</div>
 		<p>Copyright Christy Chan 2022</p>
 	</footer>

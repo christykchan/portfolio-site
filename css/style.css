@@ -5,6 +5,10 @@ Primary Color (Dark Pink): #C48FC9;
 Secondary Color (yellow): #FFEF7F;
 Text Color (White): rgb(255),(255),(255), #FFFFFF:
 */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #261C35;
   font-family: Poppins, sans-serif;
@@ -42,12 +46,24 @@ h4 {
   font-weight: 400;
 }
 
-.hero {
+#hero {
   text-align: center;
 }
 
-.largetitle {
-  font-size: 3.75em;
+#hero {
+  background-color: #18171a;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.row {
+  margin: 25px 0;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(22, 16, 31, 0.3);
 }
 
 /*hyperlinks*/
@@ -74,6 +90,38 @@ a:focus {
   color: #FFEF7F;
 }
 
+/*layout - margin & padding*/
+header {
+  background-color: rgba(22, 16, 31, 0.3);
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0px -5px 30px 0px rgba(50, 50, 50, 1);
+}
+
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Layout styling */
+.container {
+  padding: 0 15px;
+}
+
+.logo {
+  max-width: 250px;
+}
+
 /*View Project buttons*/
 .button {
   display: inline-block;
@@ -94,7 +142,7 @@ a:focus {
 .button:after {
   content: '';
   position: absolute;
-  display: block;
+  display: inline-block;
   top: 0;
   left: 50%;
   -webkit-transform: translatex(-50%);
