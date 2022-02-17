@@ -50,15 +50,21 @@ h4 {
   text-align: center;
 }
 
+#hero h2{
+  text-align: center;
+    font-weight: 400;
+}
+
 #hero {
-  background-color: #18171a;
-  padding: 20px 0;
+  padding: 30px 0;
   display: inline-block;
   width: 100%;
 }
 
 .row {
   margin: 25px 0;
+  display: inline-block;
+  width: 100%;
 }
 
 #work .row {
@@ -66,7 +72,29 @@ h4 {
   border-bottom: 1px solid rgba(22, 16, 31, 0.3);
 }
 
-/*hyperlinks*/
+#contact {
+  text-align: center;
+}
+#contact h3{
+    font-weight: 700;
+
+}
+#contact p{
+  padding-bottom:25px;
+  font-size: 0.75em;
+}
+
+/*social media icons*/
+.social {
+color: #C48FC9;
+padding: 20px 20px;
+}
+
+.social:hover{
+  opacity: 0.5; ;
+}
+
+/*nav*/
 a {
   color: #C48FC9;
   text-decoration: none;
@@ -90,14 +118,16 @@ a:focus {
   color: #FFEF7F;
 }
 
-/*layout - margin & padding*/
+/*header styling*/
 header {
-  background-color: rgba(22, 16, 31, 0.3);
+  background-color: rgba(22, 16, 31, 0.5);
   text-align: center;
+  position: relative;
   padding: 10px 0;
-  box-shadow: 0px -5px 30px 0px rgba(50, 50, 50, 1);
+  box-shadow: 0px 14px 30px 1px rgba(0, 0, 0, 0.39);
 }
 
+/*nav styling*/
 nav>ul {
   list-style-type: none;
   padding: 0;
@@ -108,7 +138,7 @@ nav>ul>li {
 }
 
 nav>ul>li>a {
-  padding: 0 15px;
+  padding: 0 25px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -119,14 +149,16 @@ nav>ul>li>a {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 100px;
 }
 
 /*View Project buttons*/
 .button {
   display: inline-block;
+  float: right;
   background-color: #C48FC9;
   color: #fff;
+  margin-top: 50px;
   font-weight: 700;
   padding: 10px 24px;
   border-radius: 8px;
@@ -142,7 +174,6 @@ nav>ul>li>a {
 .button:after {
   content: '';
   position: absolute;
-  display: inline-block;
   top: 0;
   left: 50%;
   -webkit-transform: translatex(-50%);
@@ -151,8 +182,8 @@ nav>ul>li>a {
   height: 100%;
   background: #A779AB;
   z-index: -1;
-  -webkit-transition: width 400ms ease-in-out;
-  transition: width 400ms ease-in-out;
+  -webkit-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
 }
 
 .button:hover {
@@ -163,66 +194,43 @@ nav>ul>li>a {
   width: 110%;
 }
 
-/*Footer hyperlinks*/
+/*email link*/
 .email {
-  display: var(--rLinkDisplay, inline-flex) !important;
+  font-size: 1.50em;
+    text-transform: uppercase;
+  max-width: 80%;
 }
 
-.email[href] {
-  color: var(--rLinkColor) !important;
-  text-decoration: var(--rLinkTextDecoration, none) !important;
+.email {
+  color: ##A779AB;
+  position: relative;
+  text-decoration: none;
+  transition: color .4s ease-out;
 }
 
-.text-underlined {
-  --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px);
-  /* 1 */
-  --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
-  --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
-  padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
-  position: var(--textUnderlinedPosition, relative) !important;
-  z-index: var(--textUnderlinedZindex, 1) !important;
+.email:hover {
+  color: #FFEF7F;
+  right: 0;
+  text-decoration: none;
 }
 
-.text-underlined::after {
+.email:hover:after {
+  border-color: #FFEF7F;
+  right: 0;
+}
+
+.email:after {
+  border-radius: 1em;
+  border-top: .1em solid #FFEF7F;
   content: "";
-  width: var(--textUnderlinedLineWidht, 100%) !important;
-  height: var(--uiTextUnderlinedLineHeight) !important;
-  background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(255, 255, 255, 0) 45%)) !important;
-  /* 1 */
   position: absolute;
-  left: var(--textUnderlinedLineLeft, 0) !important;
-  bottom: var(--textUnderlinedLineBottom, 0) !important;
-  z-index: var(--textUnderlinedLineZindex, -1) !important;
+  right: 100%;
+  bottom: .14em;
+  left: 0;
+  transition: right .4s cubic-bezier(0, .5, 0, 1),
+  border-color .4s ease-out;
 }
 
-.link {
-  --textUnderlinedLineHeight: 100%;
-  --textUnderlinedLineGap: 0;
-  --textUnderlinedLineColor: #79567A;
-  padding-left: .75rem;
-  padding-right: .75rem;
-}
-
-.link::after {
-  will-change: width;
-  transition: width .1s ease-in;
-  transform: none;
-  transform-origin: right bottom;
-}
-
-.link:hover {
-  --textUnderlinedLineWidht: 0;
-}
-
-.link:hover::after {
-  transition-duration: .20s;
-}
-
-.link {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-:root {
-  --rLinkColor: #FFEF7F;
+.email:hover:after {
+  right: 0;
 }
