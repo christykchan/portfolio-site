@@ -46,52 +46,22 @@ h4 {
   font-weight: 400;
 }
 
-#hero {
+/*header styling*/
+header {
+  background-color: rgba(22, 16, 31, 0.5);
   text-align: center;
+  position: relative;
+  padding: 10px 0;
+  box-shadow: 0px 14px 30px 1px rgba(0, 0, 0, 0.39);
 }
 
-#hero h2{
-  text-align: center;
-    font-weight: 400;
+/* Layout styling */
+.container {
+  padding: 0 15px;
 }
 
-#hero {
-  padding: 30px 0;
-  display: inline-block;
-  width: 100%;
-}
-
-.row {
-  margin: 25px 0;
-  display: inline-block;
-  width: 100%;
-}
-
-#work .row {
-  padding-bottom: 25px;
-  border-bottom: 1px solid rgba(22, 16, 31, 0.3);
-}
-
-#contact {
-  text-align: center;
-}
-#contact h3{
-    font-weight: 700;
-
-}
-#contact p{
-  padding-bottom:25px;
-  font-size: 0.75em;
-}
-
-/*social media icons*/
-.social {
-color: #C48FC9;
-padding: 20px 20px;
-}
-
-.social:hover{
-  opacity: 0.5; ;
+.logo {
+  max-width: 100px;
 }
 
 /*nav*/
@@ -118,16 +88,6 @@ a:focus {
   color: #FFEF7F;
 }
 
-/*header styling*/
-header {
-  background-color: rgba(22, 16, 31, 0.5);
-  text-align: center;
-  position: relative;
-  padding: 10px 0;
-  box-shadow: 0px 14px 30px 1px rgba(0, 0, 0, 0.39);
-}
-
-/*nav styling*/
 nav>ul {
   list-style-type: none;
   padding: 0;
@@ -143,22 +103,161 @@ nav>ul>li>a {
   font-weight: 700;
 }
 
-/* Layout styling */
-.container {
-  padding: 0 15px;
+/*index*/
+
+#hero {
+  text-align: center;
 }
 
-.logo {
-  max-width: 100px;
+#hero h2{
+  text-align: center;
+  font-weight: 400;
+}
+
+#hero {
+  padding: 30px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.row {
+  margin: 25px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(22, 16, 31, 0.3);
+}
+
+.coverpic{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#contact {
+  text-align: center;
+}
+#contact h3{
+    font-weight: 700;
+
+}
+#contact p{
+  padding: 25px;
+  font-size: 0.75em;
+}
+
+
+/*social media icons*/
+.social {
+padding: 20px;
+}
+
+.social:hover{
+  opacity: 0.5;
+}
+
+/*email link*/
+.email {
+  font-size: 1.50em;
+  text-transform: uppercase;
+  max-width: 80%;
+}
+
+.email {
+  color: #A779AB;
+  position: relative;
+  text-decoration: none;
+  transition: color .4s ease-out;
+}
+
+.email:hover {
+  color: #FFEF7F;
+  right: 0;
+  text-decoration: none;
+}
+
+.email:hover:after {
+  border-color: #FFEF7F;
+  right: 0;
+}
+
+.email:after {
+  border-radius: 1em;
+  border-top: .1em solid #FFEF7F;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: .14em;
+  left: 0;
+  transition: right .4s cubic-bezier(0, .5, 0, 1),
+  border-color .4s ease-out;
+}
+
+.email:hover:after {
+  right: 0;
+}
+
+/*project*/
+
+#workcontent h3{
+    text-align: center;
+    font-weight: 700;
+    color: #bbacbf;
+
+}
+
+#workcontent h4{
+    font-weight: 500;
+}
+
+/*work images*/
+.workimg {
+  max-width: 100%;
+  height: auto;
+}
+/*about page*/
+
+.mypicture, .sora {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-height: 50%;
+  border-radius: 25px;
+}
+
+#aboutme h1, h2{
+    text-align: center;
+}
+
+.resumebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #C48FC9;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.resumebutton:hover {
+  opacity: 0.5;
 }
 
 /*View Project buttons*/
 .button {
   display: inline-block;
-  float: right;
   background-color: #C48FC9;
   color: #fff;
-  margin-top: 50px;
+  margin-top: 30px;
   font-weight: 700;
   padding: 10px 24px;
   border-radius: 8px;
@@ -192,45 +291,4 @@ nav>ul>li>a {
 
 .button:hover:after {
   width: 110%;
-}
-
-/*email link*/
-.email {
-  font-size: 1.50em;
-    text-transform: uppercase;
-  max-width: 80%;
-}
-
-.email {
-  color: ##A779AB;
-  position: relative;
-  text-decoration: none;
-  transition: color .4s ease-out;
-}
-
-.email:hover {
-  color: #FFEF7F;
-  right: 0;
-  text-decoration: none;
-}
-
-.email:hover:after {
-  border-color: #FFEF7F;
-  right: 0;
-}
-
-.email:after {
-  border-radius: 1em;
-  border-top: .1em solid #FFEF7F;
-  content: "";
-  position: absolute;
-  right: 100%;
-  bottom: .14em;
-  left: 0;
-  transition: right .4s cubic-bezier(0, .5, 0, 1),
-  border-color .4s ease-out;
-}
-
-.email:hover:after {
-  right: 0;
 }
