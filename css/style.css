@@ -12,7 +12,7 @@ Text Color (White): rgb(255),(255),(255), #FFFFFF:
 body {
   background-color: #261C35;
   font-family: Poppins, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 1.6;
   color: white;
@@ -291,4 +291,35 @@ padding: 20px;
 
 .button:hover:after {
   width: 110%;
+}
+
+/*media queries*/
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+
+  header {
+  text-align: unset;
+  padding: 20px 0 13px;
+}
+
+  nav {
+  width: auto;
+  float: right;
+  margin-top: 85px;
+}
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
 }
