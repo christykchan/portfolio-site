@@ -104,12 +104,11 @@ nav>ul>li>a {
 }
 
 /*index*/
-
 #hero {
   text-align: center;
 }
 
-#hero h2{
+#hero h2 {
   text-align: center;
   font-weight: 400;
 }
@@ -131,31 +130,30 @@ nav>ul>li>a {
   border-bottom: 1px solid rgba(22, 16, 31, 0.3);
 }
 
-.coverpic{
-  max-width: 100%;
+.coverpic {
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #contact {
   text-align: center;
 }
-#contact h3{
-    font-weight: 700;
 
+#contact h3 {
+  font-weight: 700;
 }
-#contact p{
+
+#contact p {
   padding: 25px;
   font-size: 0.75em;
 }
 
-
 /*social media icons*/
 .social {
-padding: 20px;
+  padding: 20px;
 }
 
-.social:hover{
+.social:hover {
   opacity: 0.5;
 }
 
@@ -193,7 +191,7 @@ padding: 20px;
   bottom: .14em;
   left: 0;
   transition: right .4s cubic-bezier(0, .5, 0, 1),
-  border-color .4s ease-out;
+    border-color .4s ease-out;
 }
 
 .email:hover:after {
@@ -201,16 +199,14 @@ padding: 20px;
 }
 
 /*project*/
-
-#workcontent h3{
-    text-align: center;
-    font-weight: 700;
-    color: #bbacbf;
-
+#workcontent h3 {
+  text-align: center;
+  font-weight: 700;
+  color: #bbacbf;
 }
 
-#workcontent h4{
-    font-weight: 500;
+#workcontent h4 {
+  font-weight: 500;
 }
 
 /*work images*/
@@ -218,9 +214,42 @@ padding: 20px;
   max-width: 100%;
   height: auto;
 }
-/*about page*/
+/*animation example*/
 
-.mypicture, .sora {
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/*about page*/
+.mypicture {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -229,28 +258,36 @@ padding: 20px;
   border-radius: 25px;
 }
 
-#aboutme h1, h2{
-    text-align: center;
+.sora {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-width: 50%;
+  border-radius: 25px;
+}
+
+#aboutme h1, h2 {
+  text-align: center;
 }
 
 .resumebutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: #C48FC9;
-  color: #fff;
-  font-size: 0.75em;
-  font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  margin-top: 50px;
-}
+    display: inline-block;
+    background-color: #C48FC9;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 32px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 8px;
+  }
 
 .resumebutton:hover {
   opacity: 0.5;
 }
+
 
 /*View Project buttons*/
 .button {
@@ -293,33 +330,64 @@ padding: 20px;
   width: 110%;
 }
 
-/*media queries*/
 
+/*media queries*/
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-
   header {
-  text-align: unset;
-  padding: 20px 0 13px;
-}
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
 
   nav {
-  width: auto;
-  float: right;
-  margin-top: 85px;
-}
-}
+    width: auto;
+    float: right;
+    margin-top: 85px;
+  }
 
-/* ==============================
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+  /* ==============================
 Large devices (1024px or larger)
 ================================= */
-@media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1024px)
+{
+body {
+    font-size: 13px;
+    font-weight: 300;
+}
+    .col-lg-7 {
+  width: 58.33%;
 }
 
-/* ==============================
+.col-lg-5 {
+  width: 41.66%;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+  /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-}
+  @media only screen and (min-width: 1440px) {}
