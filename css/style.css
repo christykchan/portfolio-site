@@ -103,7 +103,6 @@ nav>ul>li>a {
   font-weight: 700;
 }
 
-
 /*index*/
 #hero {
   text-align: center;
@@ -129,11 +128,6 @@ nav>ul>li>a {
 #work .row {
   padding-bottom: 25px;
   border-bottom: 1px solid rgba(22, 16, 31, 0.3);
-}
-
-.coverpic {
-  height: auto;
-  border-radius: 5px;
 }
 
 #contact {
@@ -191,8 +185,8 @@ nav>ul>li>a {
   right: 100%;
   bottom: .14em;
   left: 0;
-  transition: right .4s cubic-bezier(0, .5, 0, 1),
-    border-color .4s ease-out;
+  transition: right .4s cubic-bezier(0, .5, 0, 1);
+  border-color .4s ease-out;
 }
 
 .email:hover:after {
@@ -200,6 +194,10 @@ nav>ul>li>a {
 }
 
 /*project*/
+#workcontent h1 {
+  text-align: center;
+}
+
 #workcontent h3 {
   text-align: center;
   font-weight: 700;
@@ -210,17 +208,55 @@ nav>ul>li>a {
   font-weight: 500;
 }
 
-/*work images*/
-.workimg {
-  max-width: 100%;
-  height: auto;
-}
-/*animation example*/
+.content-container {}
 
+/*work images*/
+.cover-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.img-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 50%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.img-container-small {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.text-container {
+  padding: 50px 240px;
+}
+
+/*animation example*/
 @keyframes color-change {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
 }
 
 .sun {
@@ -232,8 +268,13 @@ nav>ul>li>a {
 }
 
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
 
 .cloud-front {
@@ -241,8 +282,13 @@ nav>ul>li>a {
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .cloud-back {
@@ -250,7 +296,7 @@ nav>ul>li>a {
 }
 
 /*about page*/
-.mypicture {
+.about-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -259,39 +305,33 @@ nav>ul>li>a {
   border-radius: 25px;
 }
 
-.sora {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  max-width: 50%;
-  border-radius: 25px;
+.center-all {
+  text-align: center;
 }
 
 #aboutme h1, h2 {
   text-align: center;
 }
 
-.resumebutton {
-    display: inline-block;
-    background-color: #C48FC9;
-    color: white;
-    font-size: 16px;
-    text-decoration: none;
-    padding: 12px 32px;
-    margin: 4px 2px;
-    opacity: 1;
-    transition: 0.3s;
-    border-radius: 8px;
-  }
+.resumebutton, .button:visited {
+  display: inline-block;
+  background-color: #C48FC9;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 12px 32px;
+  margin-top: 50px;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 8px;
+}
 
 .resumebutton:hover {
   opacity: 0.5;
 }
 
-
 /*View Project buttons*/
-.button {
+.button, .button:visited {
   display: inline-block;
   background-color: #C48FC9;
   color: #fff;
@@ -331,7 +371,6 @@ nav>ul>li>a {
   width: 110%;
 }
 
-
 /*media queries*/
 /* ==============================
 Medium devices (640px and larger)
@@ -362,33 +401,33 @@ Medium devices (640px and larger)
     clear: both;
     display: table;
   }
+}
 
-
-  /* ==============================
+/* ==============================
 Large devices (1024px or larger)
 ================================= */
-  @media only screen and (min-width: 1024px)
-{
-body {
+@media only screen and (min-width: 1024px) {
+  body {
     font-size: 13px;
     font-weight: 300;
-}
-    .col-lg-7 {
-  width: 58.33%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.col-lg-5 {
-  width: 41.66%;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-  /* ==============================
+/* ==============================
 X-large devices (1440px or larger)
 ================================= */
-  @media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {}
