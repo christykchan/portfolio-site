@@ -92,7 +92,6 @@ nav>ul>li {
   display: inline-block;
 }
 */
-
 nav>ul>li>a {
   padding: 0 25px;
   text-transform: uppercase;
@@ -100,7 +99,7 @@ nav>ul>li>a {
 }
 
 .navtoggle li:not(:last-child) {
-display: none;
+  display: none;
 }
 
 .navtoggle, .navtoggle.responsive {
@@ -115,20 +114,21 @@ display: none;
   font-size: 20px;
 }
 
-.navtoggle.responsive li  {
+.navtoggle.responsive li {
   display: block;
 }
 
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid rgb(216,191,216,0.5);
+  border-top: 1px solid rgb(216, 191, 216, 0.5);
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 
@@ -394,7 +394,6 @@ display: none;
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-
   header {
     text-align: unset;
     padding: 20px 0 13px;
@@ -406,9 +405,9 @@ Medium devices (640px and larger)
     margin-top: 85px;
   }
 
-  nav > ul {
-  margin: 1em 0;
-}
+  nav>ul {
+    margin: 1em 0;
+  }
 
   .col-md-6 {
     width: 50%;
@@ -430,9 +429,8 @@ Medium devices (640px and larger)
   }
 
   .navtoggle li:last-child {
-  display: none;
-}
-
+    display: none;
+  }
 }
 
 /* ==============================
@@ -467,26 +465,26 @@ Large devices (1024px or larger)
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
-    body {
-      font-size: 14px;
-      font-weight: 300;
-    }
-
-    .text-container {
-      padding: 50px 240px;
-    }
-
-    .col-lg-7 {
-      width: 58.33%;
-    }
-
-    .col-lg-5 {
-      width: 41.66%;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  body {
+    font-size: 14px;
+    font-weight: 300;
   }
+
+  .text-container {
+    padding: 50px 240px;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
