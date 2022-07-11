@@ -119,9 +119,6 @@ nav>ul>li>a {
   font-size: 20px;
 }
 
-.navtoggle.responsive li {
-  display: block;
-}
 
 .navtoggle.responsive nav {
   padding: 24px 0 0;
@@ -408,16 +405,12 @@ Medium devices (640px and larger)
   nav {
     width: auto;
     float: right;
-    margin-top: 56px;
-  }
-
-  nav>ul {
-    margin: 1em 0;
+    margin-top: 70px;
   }
 
   .navtoggle.responsive li {
     display: block;
-    padding: 10px 0;
+    padding: 0;
     border-top: none;
   }
 
@@ -436,6 +429,10 @@ Medium devices (640px and larger)
     display: table;
   }
 
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
+
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
@@ -452,6 +449,14 @@ Large devices (1024px or larger)
   body {
     font-size: 14px;
     font-weight: 300;
+  }
+
+  .navtoggle.responsive li {
+    padding: none;
+  }
+
+  main {
+    padding-top: 30px;
   }
 
   .text-container {
@@ -477,9 +482,14 @@ Large devices (1024px or larger)
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+
   body {
     font-size: 14px;
     font-weight: 300;
+  }
+
+  .navtoggle.responsive li {
+    padding: none;
   }
 
   .text-container {
