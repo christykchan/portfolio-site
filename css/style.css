@@ -6,7 +6,7 @@ body {
   background-color: white;
   font-family: Poppins, sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   color: black;
 }
@@ -55,7 +55,7 @@ header {
 }
 
 .logo {
-  max-width: 70px;
+  max-width: 80px;
 }
 
 main {
@@ -151,9 +151,14 @@ nav>ul>li>a {
 }
 
 .row {
-  margin: 25px 0;
+  margin: 50px 0;
   display: inline-block;
   width: 100%;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(22, 16, 31, 0.3);
 }
 
 #work .row {
@@ -167,6 +172,7 @@ nav>ul>li>a {
 
 #contact h3 {
   font-weight: 700;
+  margin-bottom: 70px;
 }
 
 #contact p {
@@ -261,12 +267,42 @@ nav>ul>li>a {
   border-radius: 10px;
 }
 
+.img-container-large {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 70%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.img-container-mid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 40%;
+  text-align: center;
+  border-radius: 10px;
+}
+
 .img-container-small {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   max-width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.img-container-xsmall {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  max-width: 20%;
   text-align: center;
   border-radius: 5px;
 }
@@ -340,7 +376,7 @@ nav>ul>li>a {
   text-align: center;
 }
 
-.resumebutton, .button:visited {
+.resumebutton, .resumebutton:visited {
   display: inline-block;
   background-color: #800080;
   border: 2px solid #800080;
@@ -389,6 +425,27 @@ nav>ul>li>a {
 
 .button:hover:after {
   width: 110%;
+}
+
+/*back to top button*/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #800080; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 /*media queries*/
@@ -448,7 +505,7 @@ Large devices (1024px or larger)
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .navtoggle.responsive li {
@@ -485,7 +542,7 @@ X-large devices (1440px or larger)
 
   body {
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .navtoggle.responsive li {
